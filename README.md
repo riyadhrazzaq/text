@@ -1,3 +1,7 @@
+# Personal Blog
+My personal blog where I try explaining stuff to make sure I understand them better. URL: [https://riyadhrazzaq.github.io/text](https://riyadhrazzaq.github.io/text). Jekyll template [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+
+
 # Minimal Mistakes remote theme starter
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
