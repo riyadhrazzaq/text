@@ -1,7 +1,7 @@
 ---
 title: "Idea and Implementation / Bayes Theorem and Gaussian Naive Bayes"
 tags:
-    - machine-learning
+    - machine learning
     - implementation
 ---
 
