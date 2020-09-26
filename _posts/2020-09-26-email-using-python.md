@@ -69,7 +69,7 @@ Hello world inside message. This is known as message body
 We see 3 extra information. Content-Type is type of the msg body. Content-Transfer-Encoding is how the string in message body is encoded. Existance of `MIME-Version: 1.0` indicates that this message maintains MIME (Multipurpose Internet Mail Extensions) standard.
 
 ## MIME in short
-MIME basically says that each message body consists of multiple parts. A message is described as maintype and subtype. Generally written as `maintype/subtype`, e.g., `text/plain`, `text/html`, `application/pdf`, `image/png` etc. These informations are stored in `Content-Type` header that we have seen before. These MIME types let's us attach images, files, html inside a mail. Since a message body can have multiple combinatio of these, there should be some MIME type that lets us contain any of these inside the body. Those MIME types are known as `multipart/mixed`. So, imagine a tree data structure, root `multipart/mixed` will contain concrete types such as `text/plain` as nodes, and these nodes will contain the actual message or files as leaves.
+MIME basically says that each message body consists of multiple parts. A message is described as maintype and subtype. Generally written as `maintype/subtype`, e.g., `text/plain`, `text/html`, `application/pdf`, `image/png` etc. These informations are stored in `Content-Type` header that we have seen before. These MIME types let's us attach images, files, html inside a mail. Since a message body can have multiple combination of these, there should be some MIME type that lets us contain any of these inside the body. Those MIME types are known as `multipart/mixed`. So, imagine a tree data structure, root `multipart/mixed` will contain concrete types such as `text/plain` as nodes, and these nodes will contain the actual message or files as leaves.
 
 ## Sending Mail via SMTPlib
 
@@ -78,7 +78,7 @@ I will use `mailtrap.io` as server, because using gmail or microsoft account and
 
 ```python
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2391789313484d", "96d048bb6390e0")
+    server.login(username, password)
     server.send_message(msg)
 ```
 
@@ -117,7 +117,7 @@ from email.message import MIMEPart
 text_part = MIMEPart()
 text_part.set_content("Hello World", subtype="plain")
 
-image_filepath = '/home/potato/multimedia/namano/150.png'
+image_filepath = '150.png'
 with open(image_filepath, 'rb') as f:
     img_data = f.read()
 
@@ -131,7 +131,7 @@ msg.attach(image_part)
 
 ```python
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2391789313484d", "96d048bb6390e0")
+    server.login(username, password)
     server.send_message(msg)
 ```
 
@@ -166,7 +166,7 @@ html_part = f"""\
 msg.add_alternative(html_part, subtype="html")
 
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2391789313484d", "96d048bb6390e0")
+    server.login(username, password)
     server.send_message(msg)
 ```
 
@@ -208,7 +208,7 @@ html_part.set_content(html, subtype='html')
 msg.attach(html_part)
 
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2391789313484d", "96d048bb6390e0")
+    server.login(username, password)
     server.send_message(msg)
 ```
 
@@ -248,14 +248,14 @@ with open(image_filepath,'rb') as f:
 msg.add_attachment(only_image, maintype="image", subtype="png")
 
 # pdf attachment
-with open("/home/potato/multimedia/namano/A Sample PDF.pdf", 'rb') as f:
+with open("A Sample PDF.pdf", 'rb') as f:
     pdf_file = f.read()
 
 msg.add_attachment(pdf_file, maintype="application", subtype="octet-stream",
                   filename="A Small PDF.pdf", disposition="attachment")
 
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
-    server.login("2391789313484d", "96d048bb6390e0")
+    server.login(username, password)
     server.send_message(msg)
 ```
 
