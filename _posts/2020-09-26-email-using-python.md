@@ -126,10 +126,7 @@ image_part.set_content(img_data, maintype="image", subtype="png", disposition="i
 
 msg.attach(text_part)
 msg.attach(image_part)
-```
 
-
-```python
 with smtplib.SMTP("smtp.mailtrap.io", 2525) as server:
     server.login(username, password)
     server.send_message(msg)
