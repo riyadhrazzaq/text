@@ -36,7 +36,7 @@ This loss is penalize the model if the cosine similarity between true latent rep
 In the loss function, \(W_k\) is different for each \(k\). So, we can swap the weights afterwards if we want the model to perform the prediction for next step or 3 steps after that. Even though we are sampling \(N\) samples, whether be it positive or negaitve, the loss is calculated from the latent representation of that \(\mathbf{x}\)
 
 # References
-Oord, A. van den, Li, Y., & Vinyals, O. (2019). Representation Learning with Contrastive Predictive Coding (arXiv:1807.03748). arXiv. http://arxiv.org/abs/1807.03748 \\
+Oord, A. van den, Li, Y., & Vinyals, O. (2019). Representation Learning with Contrastive Predictive Coding (arXiv:1807.03748). arXiv. http://arxiv.org/abs/1807.03748 \
 
 E. Hinton, G. (2013). LEARNING DISTRIBUTED REPRESENTATIONS FOR STATISTICAL LANGUAGE MODELLING. Retrieved November 16, 2024, from http://www.cs.utoronto.ca/%7Ehinton/csc2535/notes/hlbl.pdf
 
