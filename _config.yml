@@ -126,3 +126,6 @@ jektex:
   silent: false
   macros:
     - ["\\vec", "\\mathbf{#1}"]
+
+footer_scripts:
+  - /assets/js/katex-html-remove.js
