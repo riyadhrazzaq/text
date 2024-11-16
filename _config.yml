@@ -26,7 +26,6 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-github: [metadata]
 
 # Outputting
 permalink: /:categories/:title/
@@ -131,3 +130,5 @@ jektex:
 
 footer_scripts:
   - /assets/js/katex-html-remove.js
+
+repository: riyadhrazzaq/text
