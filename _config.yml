@@ -121,6 +121,7 @@ tag_archive:
 
 jektex:
   cache_dir: ".jektex-cache"
+  disable_disk_cache: true
   ignore: ["*.xml"]
   silent: false
   macros:
