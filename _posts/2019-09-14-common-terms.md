@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Common terms in Statistics I"
 description: "Quartile, Standard Deviation"
 comments: true

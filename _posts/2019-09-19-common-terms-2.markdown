@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Common terms in Statistics II"
 description: "Degrees of Freedom, F-statistic, P-value, R^2 statistic"
 comments: true
