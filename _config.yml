@@ -55,6 +55,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jektex
 
 author:
   name   : "Md. Abdur Razzaq Riyadh"
@@ -117,3 +118,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+jektex:
+  cache_dir: ".jektex-cache"
+  ignore: ["*.xml"]
+  silent: false
+  macros:
+    - ["\\vec", "\\mathbf{#1}"]
