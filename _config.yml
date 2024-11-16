@@ -122,11 +122,12 @@ tag_archive:
 
 jektex:
   cache_dir: ".jektex-cache"
-  disable_disk_cache: true
+  disable_disk_cache: false
   ignore: ["*.xml"]
   silent: false
   macros:
     - ["\\vec", "\\mathbf{#1}"]
+
 
 footer_scripts:
   - /assets/js/katex-html-remove.js
