@@ -61,6 +61,7 @@ plugins:
 author:
   name   : "Md Abdur Razzaq Riyadh"
 #  avatar : "/assets/images/bio-photo.jpg"
+  home: "https://riyadhrazzaq.github.io/text"
   bio    : "My personal blog."
   links:
     - label: "Website"
