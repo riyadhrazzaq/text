@@ -97,7 +97,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
@@ -132,4 +132,4 @@ jektex:
 footer_scripts:
   - /assets/js/katex-html-remove.js
 
-repository: riyadhrazzaq/text
+repository: riyadhrazzaq/riyadhrazzaq.github.io
